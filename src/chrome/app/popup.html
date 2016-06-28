@@ -1,0 +1,100 @@
+<!doctype html>
+<html>
+
+<head>
+    <meta charset="utf-8">
+    <!-- build:css styles/popup-vendor.css -->
+    <!-- bower:css -->
+    <link rel="stylesheet" href="bower_components/foundation-sites/dist/foundation.min.css" />
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:css styles/main.css -->
+    <link href="styles/main.css" rel="stylesheet">
+    <!-- endbuild -->
+</head>
+
+<body id="popup">
+
+    <div class="row">
+        <div class="small-6 columns">
+            <h1>Periscope Tweaks</h1>
+        </div>
+        <div class="small-6 columns">
+            <a class="button small float-right" href="http://10.49.6.90:7777/pls/LJP_GREY_DUS_PROD/LAS_DLG_Startup.GO" target="_blank">Open Periscope</a>
+        </div>
+    </div>
+
+
+    <div class="callout is-hidden" data-closable data-toggler="is-hidden" id="intro">
+        <div class="row">
+            <div class="small-4 columns">
+                <img src="images/arrow.png" width="100px" height="100px" />
+            </div>
+            <div class="small-8 columns">
+                <h4>Not sure what to do?<br/>Hover over the settings to see a description.</h4>
+                <button class="close-button" id="intro-close" aria-label="Thanks, now I know!" type="button" data-close>
+                    <span aria-hidden="true">&times;</span>
+                </button>
+            </div>
+
+        </div>
+    </div>
+
+    <form autocomplete="off">
+
+        <div class="row">
+            <div class="small-4 columns">
+                <label for="position" class="text-right middle"><span data-tooltip aria-haspopup="true" class="has-tip right" data-disable-hover="false" title="When activated, the timetracker view will only show jobs according to your position. Make sure to type in your position below.">Filter by position</span></label>
+            </div>
+            <div class="small-8 columns">
+                <div class="switch large">
+                    <input class="switch-input" id="switch-filter-position" type="checkbox" name="switch-filter-position" value="filter">
+                    <label class="switch-paddle" for="switch-filter-position">
+                        <span class="show-for-sr">Filter by position</span>
+                        <span class="switch-active" aria-hidden="true">Yes</span>
+                        <span class="switch-inactive" aria-hidden="true">No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-4 columns">
+                <label for="position" class="text-right middle"><span data-tooltip aria-haspopup="true" class="has-tip right" data-disable-hover="false" title="If you have activated the &quot;Filter by position&quot; feature you need to fill in your position exactly as shown in Periscope.">Position</span></label>
+            </div>
+            <div class="small-8 columns">
+                <input type="text" id="position" placeholder="e.g. Account Director">
+            </div>
+        </div>
+        <div class="row">
+            <div class="small-4 columns">
+                <label for="bottomsticker" class="text-right middle"><span data-tooltip aria-haspopup="true" class="has-tip right" data-disable-hover="false" title="Shows a bar at the bottom of Periscope that sums up your recorded entries for each day, so you can see if you have reached eight hours yet or not.">Show bottom bar</span></label>
+            </div>
+            <div class="small-8 columns">
+                <div class="switch large">
+                    <input class="switch-input" id="switch-bottomsticker" type="checkbox" name="switch-bottomsticker" value="bottomsticker">
+                    <label class="switch-paddle" for="switch-bottomsticker">
+                        <span class="show-for-sr">Show bottom bar</span>
+                        <span class="switch-active" aria-hidden="true">Yes</span>
+                        <span class="switch-inactive" aria-hidden="true">No</span>
+                    </label>
+                </div>
+            </div>
+        </div>
+    </form>
+
+    <!-- build:js scripts/popup-vendor.js -->
+    <!-- bower:js -->
+    <script src="bower_components/jquery/dist/jquery.min.js"></script>
+    <script src="bower_components/foundation-sites/dist/foundation.js"></script>
+    <script src="bower_components/foundation-sites/dist/plugins/foundation.tooltip.js"></script>
+    <script src="bower_components/foundation-sites/dist/plugins/foundation.toggler.js"></script>
+    <!-- endbower -->
+    <!-- endbuild -->
+
+    <!-- build:js scripts/popup.js -->
+    <script src="scripts/popup.js"></script>
+    <!-- endbuild -->
+</body>
+
+</html>

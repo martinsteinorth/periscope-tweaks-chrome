@@ -1,0 +1,54 @@
+{
+  "name": "__MSG_appName__",
+  "version": "0.2.0",
+  "manifest_version": 2,
+  "description": "__MSG_appDescription__",
+  "icons": {
+    "16": "images/icon-16.png",
+    "128": "images/icon-128.png"
+  },
+  "default_locale": "en",
+  "background": {
+    "scripts": [
+      "scripts/chromereload.js",
+      "scripts/background.js"
+    ]
+  },
+  "permissions": [
+    "storage"
+  ],
+  "content_scripts": [
+    {
+      "matches": [
+        "http://10.49.6.90/*",
+        "https://10.49.6.90/*"
+      ],
+      "js": [
+        "bower_components/jquery/dist/jquery.min.js",
+        "bower_components/foundation-sites/dist/foundation.min.js",
+        "scripts/contentscript.js"
+      ],
+      "css": [
+        "styles/main.css"
+      ],
+      "run_at": "document_end",
+      "all_frames": false
+    }
+  ],
+"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
+  "omnibox": {
+    "keyword": "OMNIBOX-KEYWORD"
+  },
+  "browser_action": {
+    "default_icon": {
+      "19": "images/icon-19.png",
+      "38": "images/icon-38.png"
+    },
+    "default_title": "Periscope Tweaks for Chrome",
+    "default_popup": "popup.html"
+  },
+  "web_accessible_resources": [
+    "bower_components/jquery-sticky/jquery.sticky.js",
+    "images/icon-48.png"
+  ]
+}

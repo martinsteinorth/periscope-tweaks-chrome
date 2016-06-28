@@ -1,0 +1,10 @@
+{
+  "appName": {
+    "message": "Periscope Tweaks for Chrome",
+    "description": "The name of the application"
+  },
+  "appDescription": {
+    "message": "Make Periscope better. This extension is still in alpha stage and needs a lot of testing and improvements. Only use it with care and double check your time tracker entries. Send your feedback to martin.steinorth@grey.de",
+    "description": "The description of the application"
+  }
+}
